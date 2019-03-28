@@ -18,10 +18,10 @@ int main()
     printf("Voici maintenant les diff‚rentes op‚rations effectu‚es ainsi que les valeurs des diff‚rentes variables aprŠs chaque op‚ration:\n\n");
     printf("Valeurs de base:\na = %i\nb = %i\nc = %i\nP1 = %i\nP2 = %i\n\n",a,b,c,P1,P2);
     printf("Adresses memoires de base:\na = %i\nb = %i\nc = %i\nP1 = %i\nP2 = %i\n\n",&a,&b,&c,&P1,&P2);
-    P1 = &a;
-    b = *P1;
-    P2 = &b;
-    c = &P2;
-    printf("Operations:\nP1 = &a\nb = *P1\nP2 = *b\nc = &P2\n\nValeurs:\nP1 = %i\nb = %i\nP2 = %i\nc = %i\n",P1,b,P2,c);
+    P1 = c;
+    P2 = P1 + a;
+    c = P2;
+    printf("Operations effectuees: \nP1 = &c \nP2 = P1 + a \nc = P2\n\n");
+    printf("Resultats:\nP1 = %i\nP2 = %i\nc = %i\n",P1,P2,c);
     return 0;
 }
