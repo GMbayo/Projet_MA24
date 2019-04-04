@@ -1,9 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
+void calcul(int* pA, int* pB, int* pC);
+
+int main(int argc, char *argv[])
 {
-    int a = 0, b = 0, c = 0, *P1 = 0, *P2 = 0;
+    int a = 0, b = 0, c = 0;
+
     fflush(stdin);
     printf("Bonjour, nous allons utiliser les pointeurs, pour cela, vous devrez entrer 3 nombres.\n \n");
     printf("Entrez le premier nombre: \n");
@@ -16,12 +19,24 @@ int main()
     scanf("%i",&c);
     system("cls");
     printf("Voici maintenant les diff‚rentes op‚rations effectu‚es ainsi que les valeurs des diff‚rentes variables aprŠs chaque op‚ration:\n\n");
-    printf("Valeurs de base:\na = %i\nb = %i\nc = %i\nP1 = %i\nP2 = %i\n\n",a,b,c,P1,P2);
-    printf("Adresses memoires de base:\na = %i\nb = %i\nc = %i\nP1 = %i\nP2 = %i\n\n",&a,&b,&c,&P1,&P2);
-    P1 = c;
-    P2 = P1 + a;
-    c = P2;
-    printf("Operations effectuees: \nP1 = &c \nP2 = P1 + a \nc = P2\n\n");
-    printf("Resultats:\nP1 = %i\nP2 = %i\nc = %i\n",P1,P2,c);
+    printf("Valeurs de base:\na = %i\nb = %i\nc = %i\n\n",a,b,c);
+
+    printf("Adresses memoires de base:\na = %i\nb = %i\nc = %i\n\n",&a,&b,&c);
+
+    calcul(&a,&b,&c);
+
+    printf("Calculs effectues:\n*pA *= 2\n*pB += *pA\n*pC = *pA\n\n(pA, pB et pC sont des pointeurs sur a, b et c)\n\n");
+
+    printf("Valeurs de apres calcul:\na = %i\nb = %i\nc = %i\n\n",a,b,c);
+
+    printf("Adresses memoires apres calcul:\na = %i\nb = %i\nc = %i\n\n",&a,&b,&c);
+
     return 0;
+}
+
+void calcul(int* pA, int* pB, int* pC)
+{
+    *pA *= 2;
+    *pB += *pA;
+    *pC = *pA;
 }
