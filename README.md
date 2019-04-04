@@ -38,10 +38,33 @@ Nous pouvons y observer l’une des utilités des pointeurs. En effet, dans ce p
 non pas un résultat (comme ce serait le cas avec un return) de la fonction calcul, mais bien 3. 
 Comme le pointeurs pointe sur l’adresse de la variable correspondante dans le main, lorsque on change la valeur contenue 
 à l’adresse du pointeur (à l’aide d’une *), on modifie directement la valeur de notre variable, donc pas besoin de 
-retourner une valeur puisque elle est déjà changée ! 
+retourner une valeur puisque elle est déjà changée dans la mémoire! 
 Il y a certain points auxquels il faut être attentifs lors de l’utilisation des pointeurs :
 	- le symbole & désigne l’adresse d’une variable.
 	- le symbole * désigne la valeurs d’une variable.
 	- un pointeur est une variable qui stock l’adresse d’une variable.
 L’utilisation des pointeurs peut se faire de multiples manières, en fonction des besoin et de l’imagination du programmeur.
 On peut par exemple faire des pointeurs de pointeurs, des pointeurs de pointeurs de pointeurs, etc...
+
+Conclusion:
+
+En définitive, les pointeurs servent à stocker des adresses mémoire.
+ 
+L'adresse mémoire d'une variable peut être trouvée en ajoutant le caractère "&" avant le nom de la variable (ex: &maVariable).
+
+Un pointeur se déclare en rajoutant le caractère "*" avant le nom de la variable (ex: int *monPointeur)
+
+Pour initialiser un pointeur vide, on utilise la valeur "NULL".
+*Les notations "int* monPointeur" et "int * monPointeur" sont aussi accéptées.
+
+On peut donc stocker une adresse dans un pointeur comme suit: "int *monPointeur = &maVariable".
+
+Pour modifier la valeur stockée à l'adresse stockée dans le pointeur, on utilise aussi le symbol "*" (ex: "*monPointeur = 2") 
+On pourrait avoir le calcul suivants:
+	int a = 5;
+	int *p = NULL;
+	p = &a;
+qui donnerait le résultat suivant:
+	p serait égal a &a (par exemple 17263)
+	*p serait égal a a, donc 5
+
