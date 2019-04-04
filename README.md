@@ -10,6 +10,8 @@ sources:
   - https://zestedesavoir.com/tutoriels/755/le-langage-c-1/1043_aggregats-memoire-et-fichiers/4277_les-pointeurs/
            
         Permettent de bien capter le principe des pointeurs grâce à des explications et des exemples concrets.
+Ces sources ont été choisie d'après une connaissance de base de certains sites qui m'ont été utile dans la compréhension d'autres
+conceptes de programmation ou alors par hasard suite a des mots clés tels que "initialiser pointeurs C" dans le navigateur firefox.
   
 Introduction:
 
@@ -21,7 +23,7 @@ C’est pour cette raison que ce petit code offre une démonstration de leurs ut
 Fonctionnement du code:
 
 Le code demande à l’utilisateur d’entrer 3 nombre. C’est nombres sont stocké dans des variables (a,b et c).
-La valeur et l’adresse mémoire de chacune de ces variables est affichée dans la console, puis on appelle un fonction 
+La valeur et l’adresse mémoire de chacune de ces variables est affichée dans la console, puis on appelle une fonction 
 (calcul) qui utilise des pointeurs (pA, pB et pC) pointant sur chacune de nos 3 variables. Cette fonction est une fonction 
 void, elle ne renvoie donc aucune valeur de sortie.
 Des calcules sont effectués sur ces pointeurs de façon à faire changer la valeur des cases mémoire sur laquelle ils 
